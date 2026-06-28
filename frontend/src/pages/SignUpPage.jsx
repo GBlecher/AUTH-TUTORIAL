@@ -11,7 +11,7 @@ function SignUpPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSignUp = (e: { preventDefault: () => void; }) => {
+  const handleSignUp = (e) => {
     e.preventDefault();
     // Handle sign-up logic here
   };
@@ -34,21 +34,21 @@ function SignUpPage() {
             type="text"
             placeholder="Full Name"
             value={name}
-            onChange={(e: { target: { value: SetStateAction<string>; }; }) => setName(e.target.value)}
+            onChange={(e) => setName(e.target.value)}
           />
           <Input
             icon={Mail}
             type="email"
             placeholder="Email Address"
             value={email}
-            onChange={(e: { target: { value: SetStateAction<string>; }; }) => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <Input
             icon={Lock}
             type="password"
             placeholder="Password"
             value={password}
-            onChange={(e: { target: { value: SetStateAction<string>; }; }) => setPassword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)}
           />
 
            <PasswordStrengthMeter password={password} />
